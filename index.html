@@ -12,7 +12,7 @@
 <body>
     <!-- header  -->
     <header>
-        TESTE
+        
         <nav class="navbar">
 
             <div class="nav-menu">
@@ -34,6 +34,13 @@
                 <img src="svg/icon-twitter.svg" onload="SVGInject(this)" />
             </div>
 
+            <input type="checkbox" id="hamburguer" style="display: none;">
+
+            <label for="hamburguer">
+                <div class="hamburguer mr-2"></div>
+            </label>
+            
+
         </nav>
     </header>
 
@@ -41,24 +48,23 @@
     <section class="container">
 
         <div class="container-item-1">
-            <p>
+            <div class="px-1">
                 <img src="img/spiderman-text.png" onload="SVGInject(this)" />
-            </p>
-            <p>
+            </div>
+            <p class="my-2">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                 Iaculis velit magna vitae mauris orci fames posuere nibh. 
                 Sit tellus amet facilisi sit odio pulvinar scelerisque quam et. 
                 Ultrices facilisis nunc massa diam, quis mi imperdiet. 
             </p>
-            <p>
+            <div>
                 <a href="" class="btn">Pre-order now</a>
-                <a href="" class="btn-secondary">Watch the teaser</a>
-            </p>
-            <p>
-                <img src="svg/ps.svg" onload="SVGInject(this)" />
-                <img src="svg/marvel.svg" onload="SVGInject(this)" />
-
-            </p>
+                <a href="" class="ml-2 btn-secondary">Watch the teaser</a>
+            </div>
+            <div class="flex align-items-center mt-1">
+                <img src="svg/ps.svg" class="w-auto" onload="SVGInject(this)" />
+                <img src="svg/marvel.svg" class="ml-2 w-auto" onload="SVGInject(this)" />
+            </div>
         </div>
 
         <div class="container-item-2">
