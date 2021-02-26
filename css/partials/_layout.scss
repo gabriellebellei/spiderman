@@ -5,8 +5,8 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    overflow: none;
-    height: 85vh;
+    overflow: hidden;
+    height: 100vh;
 
     @include responsive(){
         flex-direction: column;
@@ -16,18 +16,24 @@
 }
 
 .container-item-1{
-    max-width: 576px;
+    max-width: 580px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: flex-start;
 }
+
+.container-item-2{
+    flex-grow: 5;
+  
+  }
 
 .flex{
     display: flex;
 }
 
 .w-auto{
-    width: 0 auto;
+    width: auto;
 }
 
 .align-items-center{
@@ -35,7 +41,7 @@
 }
 
 .spiderman{
-    width: 150%;
+    width: 130%;
     transform: translate3d(-170px,0,0);
 
     @include responsive(){
@@ -163,3 +169,16 @@
     }
 }
 
+.bg-loader{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(225deg, $red 0%, $red-dark 100%);
+    overflow: hidden
+}

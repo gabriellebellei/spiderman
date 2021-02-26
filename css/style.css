@@ -47,8 +47,8 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  overflow: none;
-  height: 85vh;
+  overflow: hidden;
+  height: 100vh;
 }
 
 @media screen and (max-width: 960px) {
@@ -63,7 +63,7 @@ p {
 }
 
 .container-item-1 {
-  max-width: 576px;
+  max-width: 580px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -71,9 +71,18 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+}
+
+.container-item-2 {
+  -webkit-box-flex: 5;
+      -ms-flex-positive: 5;
+          flex-grow: 5;
 }
 
 .flex {
@@ -83,7 +92,7 @@ p {
 }
 
 .w-auto {
-  width: 0 auto;
+  width: auto;
 }
 
 .align-items-center {
@@ -93,7 +102,7 @@ p {
 }
 
 .spiderman {
-  width: 150%;
+  width: 130%;
   -webkit-transform: translate3d(-170px, 0, 0);
           transform: translate3d(-170px, 0, 0);
 }
@@ -237,9 +246,31 @@ p {
   background: linear-gradient(101.47deg, #0a0c10 26.38%, rgba(10, 12, 16, 0.8) 50.07%, #0A0C10 73.17%);
 }
 
+.bg-loader {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: linear-gradient(225deg, #EA1D22 0%, #B31317 100%);
+  overflow: hidden;
+}
+
 header {
   width: 100%;
   padding-top: 16px;
+  position: fixed;
+  z-index: 800;
 }
 
 .navbar {
@@ -294,15 +325,15 @@ header {
   font-weight: 200;
   position: relative;
   color: #959698;
-  -webkit-transition: .7s ease;
-  transition: .7s ease;
+  -webkit-transition: all .7s ease;
+  transition: all .7s ease;
 }
 
 .nav-link::after {
   content: '';
   display: block;
   position: absolute;
-  top: -90%;
+  top: -80%;
   left: 50%;
   width: 2px;
   height: 0px;
@@ -405,6 +436,46 @@ header {
   left: 15%;
   width: 70%;
   height: 5px;
+}
+
+.logo-spiderman {
+  fill: transparent;
+  -webkit-animation: logo-spiderman 12s ease infinite alternate;
+          animation: logo-spiderman 12s ease infinite alternate;
+}
+
+@-webkit-keyframes logo-spiderman {
+  0% {
+    stroke-width: 0;
+    stroke-dasharray: 1 100;
+    fill: transparent;
+  }
+  25% {
+    stroke-width: 1;
+    fill: transparent;
+    stroke-dasharray: 100 0;
+  }
+  60%, 100% {
+    stroke-width: 0.3;
+    fill: #E5E9EF;
+  }
+}
+
+@keyframes logo-spiderman {
+  0% {
+    stroke-width: 0;
+    stroke-dasharray: 1 100;
+    fill: transparent;
+  }
+  25% {
+    stroke-width: 1;
+    fill: transparent;
+    stroke-dasharray: 100 0;
+  }
+  60%, 100% {
+    stroke-width: 0.3;
+    fill: #E5E9EF;
+  }
 }
 
 .s-0 {
